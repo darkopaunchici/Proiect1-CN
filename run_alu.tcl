@@ -8,7 +8,7 @@ vlog non_rest.v
 vlog mux.v
 vlog testbench.v
 
-vsim work.alu_test
+vsim work.alu_tb
 
 add wave *
 
