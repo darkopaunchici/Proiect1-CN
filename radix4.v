@@ -74,8 +74,8 @@ module booth_radix4_multiplier(
                     
                     // Add, subtract or do nothing based on booth selector
                     case (booth_sel)
-                        3'b001, 3'b010: acc <= acc + M;         // +M (multiplier bits = 01 or 10)
-                        3'b011: acc <= acc + {M, 1'b0};        // +2M (multiplier bits = 11)
+                        3'b001, 3'b010: acc <= acc + M;         // +M (multiplier bits = 001 or 010)
+                        3'b011: acc <= acc + {M, 1'b0};        // +2M (multiplier bits = 011)
                         3'b100: acc <= acc - {M, 1'b0};        // -2M (multiplier bits = 100)
                         3'b101, 3'b110: acc <= acc - M;         // -M (multiplier bits = 101 or 110)
                         default: acc <= acc;                   // No operation (multiplier bits = 000 or 111)
